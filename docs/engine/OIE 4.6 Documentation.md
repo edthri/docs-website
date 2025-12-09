@@ -43,7 +43,7 @@ to the mirth.properties file and restarting the OIE service.
 #### **Admin: Categories**
 
 The administration is organised into three Categories:  
-**![][image1]**
+**![Web UI Cert Categories](assets/images/image_46_1.png)**
 \
 \
 *Native Java Certificate Store*:	Read-only Java certificate store.  
@@ -66,7 +66,7 @@ Fingerprint (SHA-1)
 
 
 Native Java Certificate Store panel display example:  
-![][image2]  
+![](assets/images/image_46_2.png)
 	*Note: the Export button is not supported.*
 
 #### 
@@ -92,18 +92,18 @@ Certificate Verification
 ```
 Certificate Details example:
 
-![][image3]
+![](assets/images/image_46_3.png)
 
 Certificate Details example continued:
 
-![][image4]  
-![][image5]
+![](assets/images/image_46_4.png)
+![](assets/images/image_46_5.png)
 
 The *Verify Certificate* button tasks TLS Manager with verifying the certificate against  using CA and OCSP resources. check  
 It will display the result including chain validation details if relevant.
 
 Verification Example:  
-![][image6]
+![](assets/images/image_46_6.png)
 
 #### **Admin: Additional Trusted Certificates**
 
@@ -113,44 +113,42 @@ Options:
 *Import From URL*  
 *Add New*
 
-*![][image7]*
+*![](assets/images/image_46_7.png)*
 
 ##### **ATC: Import Certificate**
 
 On clicking the *Import Certificate* button you can either paste a PEM Certificate Chain into the text box or click *Choose Certificate File* and select a file to import from disk:  
-![][image8]
+![](assets/images/image_46_8.png)
 
 ##### **ATC: Import From URL**
 
 On clicking the *Import From URL* button you can paste an HTTPS URL into the field.  
-![][image9]  
+![](assets/images/image_46_9.png)
 Click *Fetch Certificates* to show details of the certificates available.
 
-##### **![][image10]**
+##### **![](assets/images/image_46_10.png)**
 
 Example:
 
-##### **![][image11]**
-
-##### **![][image12]**
+##### **![](assets/images/image_46_11.png)**
 
 ##### **ATC: Certificate Management**
 
 Additional Trusted Certificates Panel Display example:
 
-*![][image13]*
+*![](assets/images/image_46_12.png)*
 
 
 ###### **ATC: Certificate Edit**
 
 A certificate alias can be edited, as illustrated below.  
-**![][image14]**
+**![](assets/images/image_46_13.png)**
 
 ###### **ATC: Certificate Removal**
 
 A certificate can be removed, as illustrated below.  Please note this action cannot be undone.
 
-![][image15]
+![](assets/images/image_46_14.png)
 
 #### **Admin: Local Certificates**
 
@@ -160,7 +158,7 @@ Options:
 *Import Certificate (from file)*  
 *Add New*
 
-*![][image16]*
+![](assets/images/image_46_15.png)
 
 
 
@@ -168,7 +166,7 @@ Options:
 
 Local Certificates Panel Display example:
 
-![][image17]
+![](assets/images/image_46_16.png)
 
 
 
@@ -192,16 +190,16 @@ The TLS Settings section is present in the **HTTP Sender**, **TCP Sender** and *
 
 **Use TLS Manager**: Yes/No  
 	*Enables the TLS section*  
-	*![][image18]*  
+	*![](assets/images/image_46_17.png)*  
 \
 **Server Certificate Validation**: Enabled/Disabled  
 ***I**f you want the receiving endpoint to prove its identity?*
-*![][image19]*  
+*![](assets/images/image_46_18.png)*  
 \
 **Subject DN Validation Mode**: None/Partial/Exact  
 *To check the receiving endpoint certificate matches specific Distinguished Name attributes.  **Use with caution.***  
 *Example for illustration purposes only:*  
-*![][image20]*
+*![](assets/images/image_46_19.png)*
 \
 \
 **CRL Mode**: Disabled/Soft Fail/Hard Fail  
@@ -225,47 +223,46 @@ The TLS Settings section is present in the **HTTP Sender**, **TCP Sender** and *
 **Trusted Server Certificates**:  
 *If Server Certificate Validation is Enabled (above).*  
 *Select from **Additional Trusted Certificates.***  
-***![][image21]***  
-***![][image22]***
+***![](assets/images/image_46_32.png)***  
 \
 \
 **Hostname verification**: Enabled/Disabled  
 To verify hostname matches? (matches what?)  
-***![][image23]***
+***![](assets/images/image_46_22.png)***
 \
 \
 **Client Certificate**:  
 *Your client certificate to present to the endpoint if requested or required.  Select from **Local Certificates.***  
-***![][image24]***
+***![](assets/images/image_46_23.png)***
 \
 \
 **Enabled Protocols**:  
 *Select the acceptable protocol or protocols.*  
 *The list is defined in mirth.properties as https.server.protocols*  
-*![][image25]*
+*![](assets/images/image_46_24.png)*
 \
 \
 **Enabled Ciphers**:  
 *Select the ciphers associated with the selected protocol(s).*  
 *The list is defined in  mirth.properties as https.ciphersuites*  
-*![][image26]*  
+*![](assets/images/image_46_25.png)*  
 	
 
 #### ***Sender GUI Examples***
 
 ##### **Connector Type: HTTP Sender**
 
-![][image27]
+![](assets/images/image_46_26.png)
 
 ##### **Connector Type: TCP Sender** 
 
-![][image28]
+![](assets/images/image_46_27.png)
 
 ##### 
 
 ##### **Connector Type: Web Service Sender**
 
-### **![][image29]**
+### **![](assets/images/image_46_28.png)**
 
 ### **Listeners**
 
@@ -275,27 +272,26 @@ The TLS Settings section is present in the **HTTP Listener**, **TCP Listener** a
 
 **Use TLS Manager**: Yes/No  
 	*Enables the TLS section*  
-	*![][image18]*
+	*![](assets/images/image_46_29.png)*
 \
 \
 **Server Certificate**:  
 *Select from **Local CertifIcates***  
-***![][image30]***  
+***![](assets/images/image_46_30.png)***  
 \
 **Client Authentication Mode**: None/Requested/Required  
 I*f you want the client to prove their identity you can **Request** (provide the option) or **Require** (mandate) that they supply a certificate.*  
-***![][image31]***  
+***![](assets/images/image_46_31.png)***  
 \
 **Trusted Client Configuration**:  
 *If you are Requesting or Requiring a Client Certificate (above).*  
 *Select from **Additional Trusted Certificates.***  
-***![][image32]***  
-***![][image33]***  
+***![](assets/images/image_46_33.png)***  
 \
 **Subject DN Validation Mode**: None/Partial/Exact  
 *If you want to accept Client Certificates that match specific Distinguished Name attributes.  **Use with caution.***  
 *Example for illustration purposes only:*  
-*![][image20]*  
+*![](assets/images/image_46_34.png)*  
 \
 **CRL Mode**: Disabled/Soft Fail/Hard Fail  
 *To have a Client Certificate automatically checked against a Certificate Revocation List (CRL) service.*  
@@ -304,7 +300,7 @@ I*f you want the client to prove their identity you can **Request** (provide the
 *\*Note: is possible for a certificate to specify a different port.*  
 ***Soft Fail** will allow the connection to proceed in the event that the CRL service does not respond.*  
 ***Hard Fail** will only allow the connection if the CRL service responds and the certificate is confirmed as not revoked.*  
-*![][image34]*
+*![](assets/images/image_46_35.png)*
 \
 \
 **OCSP Mode**: Disabled/Soft Fail/Hard Fail  
@@ -314,26 +310,26 @@ I*f you want the client to prove their identity you can **Request** (provide the
 *\*Note: It is possible for a certificate to specify a different port*  
 ***Soft Fail** will allow the connection to proceed in the event that the OSCP service does not respond.*  
 ***Hard Fail** will only allow the connection if the OSCP service responds and the certificate is confirmed as not revoked.*  
-*![][image35]*
+*![](assets/images/image_46_36.png)*
 \
 \
 **Enabled Protocols**:  
 *Select the server protocol or protocols.*  
 *The list is defined in mirth.properties as https.server.protocols*  
-*![][image25]*
+*![](assets/images/image_46_37.png)*
 \
 \
 **Enabled Ciphers**:  
 *Select the ciphers associated with the selected protocol(s).*  
 *The list is defined in  mirth.properties as https.ciphersuites*  
-*![][image26]*  
+*![](assets/images/image_46_38.png)*  
 	
 
 #### ***Listener GUI Examples***
 
 ##### **Connector Type: HTTP Listener**
 
-![][image27]
+![](assets/images/image_46_39.png)
 
 ##### **Connector Type: TCP Listener**
 
@@ -343,7 +339,7 @@ I*f you want the client to prove their identity you can **Request** (provide the
 
 ##### **Connector Type: Web Service Listener**
 
-![][image37]
+![](assets/images/image_46_41.png)
 
 
 
@@ -351,13 +347,15 @@ I*f you want the client to prove their identity you can **Request** (provide the
 
 The GIT Extension plugin provides the Edit Channel view with an extra tab: *Version History*
 
-![][image38]
+![](assets/images/image_46_42.png)
+
 
 #### ***Version History***
 
 Shown here is the version history of the channel.  The latest version is at the top of the list.
 
-![][image39]
+![](assets/images/image_46_43.png)
+
 
 #### 
 
@@ -366,7 +364,9 @@ Shown here is the version history of the channel.  The latest version is at the 
 The Version History is automatically refreshed when a user enters the Edit Channel view.   
 If a user wishes to see a change reflected in the Version History tab without leaving the Edit Channel view, the GIT Extension provides a *Refresh History* option in the Channel tasks section.
 
-![][image40]             ![][image41]
+![](assets/images/image_46_44.png)
+
+![](assets/images/image_46_45.png)
 
 #### ***Show Diff***
 
@@ -374,13 +374,13 @@ To view the differences between two versions, click on one version to highlight 
 Right-click one of the highlighted versions to reveal a dropdown menu.    
 Select *Show Diff* from the dropdown.
 
-#### ***![][image42]***
+#### ***![](assets/images/image_46_46.gif)***
 
 #### ***Channel Diff: Object View***
 
 Displays a side-by-side illustration on the channel’s defined properties and data items with differences highlighted.
 
-![][image43]
+![](assets/images/image_46_47.png)
 
 #### 
 
@@ -388,7 +388,7 @@ Displays a side-by-side illustration on the channel’s defined properties and d
 
 Displays a side-by-side illustration on the channel XML with differences highlighted.
 
-![][image44]
+![](assets/images/image_46_48.png)
 
 #### 
 
@@ -396,7 +396,7 @@ Displays a side-by-side illustration on the channel XML with differences highlig
 
 To revert the channel design to an alternative version right-click the chosen alternative and select *Revert to this version* from the dropdown.  This action creates a new version of the channel based on the selected version.
 
-# **![][image45]**
+# **![](assets/images/image_46_49.gif)**
 
 # 
 
