@@ -1,4 +1,4 @@
-# **OIE 4.6 Documentation Master**
+# **OIE 4.6 Documentation**
 
 # **1\. Overview**
 
@@ -46,9 +46,10 @@ The administration is organised into three Categories:
 **![Web UI Cert Categories](assets/images/image_46_1.png)**
 \
 \
-*Native Java Certificate Store*:	Read-only Java certificate store.  
-*Additional Trusted Certificates*: 	Certificates of remote clients or remote servers.  
-*Local Certificates:* 				Certificates with Private Keys. Typically representing the owner of the OIE instance.
+**Native Java Certificate Store:** &emsp;&emsp; Read-only Java certificate store.  
+**Additional Trusted Certificates:** &emsp; Certificates of remote clients or remote servers.  
+**Local Certificates:** &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Certificates with Private Keys. Typically representing the owner of the OIE instance.  
+
 
 #### **Admin: Panel Display**
 
@@ -67,7 +68,8 @@ Fingerprint (SHA-1)
 
 Native Java Certificate Store panel display example:  
 ![](assets/images/image_46_2.png)
-	*Note: the Export button is not supported.*
+
+*Note: the Export button is not supported.*
 
 #### 
 
@@ -99,7 +101,7 @@ Certificate Details example continued:
 ![](assets/images/image_46_4.png)
 ![](assets/images/image_46_5.png)
 
-The *Verify Certificate* button tasks TLS Manager with verifying the certificate against  using CA and OCSP resources. check  
+The *Verify Certificate* button tasks TLS Manager with verifying the certificate. 
 It will display the result including chain validation details if relevant.
 
 Verification Example:  
@@ -113,7 +115,7 @@ Options:
 *Import From URL*  
 *Add New*
 
-*![](assets/images/image_46_7.png)*
+![](assets/images/image_46_7.png)
 
 ##### **ATC: Import Certificate**
 
@@ -123,28 +125,29 @@ On clicking the *Import Certificate* button you can either paste a PEM Certifica
 ##### **ATC: Import From URL**
 
 On clicking the *Import From URL* button you can paste an HTTPS URL into the field.  
-![](assets/images/image_46_9.png)
-Click *Fetch Certificates* to show details of the certificates available.
+![](assets/images/image_46_8a.png)
 
-##### **![](assets/images/image_46_10.png)**
+Click *Fetch Certificates* to show details of the certificates available.
+![](assets/images/image_46_9.png)
 
 Example:
 
+##### **![](assets/images/image_46_10.png)**
 ##### **![](assets/images/image_46_11.png)**
 
 ##### **ATC: Certificate Management**
 
 Additional Trusted Certificates Panel Display example:
 
-*![](assets/images/image_46_12.png)*
+![](assets/images/image_46_12.png)
 
 
-###### **ATC: Certificate Edit**
+##### **ATC: Certificate Edit**
 
 A certificate alias can be edited, as illustrated below.  
-**![](assets/images/image_46_13.png)**
+![](assets/images/image_46_13.png)
 
-###### **ATC: Certificate Removal**
+##### **ATC: Certificate Removal**
 
 A certificate can be removed, as illustrated below.  Please note this action cannot be undone.
 
@@ -189,70 +192,74 @@ The TLS Settings section is present in the **HTTP Sender**, **TCP Sender** and *
 #### ***TLS Settings***
 
 **Use TLS Manager**: Yes/No  
-	*Enables the TLS section*  
-	*![](assets/images/image_46_17.png)*  
+	Enables the TLS section  
+	![](assets/images/image_46_17.png)  
 \
-**Server Certificate Validation**: Enabled/Disabled  
-***I**f you want the receiving endpoint to prove its identity?*
-*![](assets/images/image_46_18.png)*  
+**Server Certificate Validation**: *Enabled/Disabled*   
+If you want the receiving endpoint to prove its identity?  
+![](assets/images/image_46_18.png)  
 \
-**Subject DN Validation Mode**: None/Partial/Exact  
-*To check the receiving endpoint certificate matches specific Distinguished Name attributes.  **Use with caution.***  
-*Example for illustration purposes only:*  
-*![](assets/images/image_46_19.png)*
-\
-\
-**CRL Mode**: Disabled/Soft Fail/Hard Fail  
-*To have the endpoint certificate? automatically checked against a Certificate Revocation List (CRL) service.*  
-*The service used is defined within each certificate. It will typically be the Issuing Authority.*  
-*Protocol: TCP; Port 80 or 443\**  
-*\*Note: is possible for a certificate to specify a different port.*  
-***Soft Fail** will allow the connection to proceed in the event that the CRL service does not respond.*  
-***Hard Fail** will only allow the connection if the CRL service responds and the certificate is confirmed as not revoked.*
+**Subject DN Validation Mode**: *None/Partial/Exact*  
+To check the receiving endpoint certificate matches specific Distinguished Name attributes.  **Use with caution.**  
+Example for illustration purposes only:  
+![](assets/images/image_46_19.png)
 \
 \
-**OCSP Mode**: Disabled/Soft Fail/Hard Fail  
-*To have the endpoint certificate? automatically checked against an Online Certificate Status Protocol service (OSCP).*  
-*The service used is defined within each certificate. This is typically the Certificate Authority (CA) that issued it.*  
-*Protocol: TCP; Port 80 or 443\**  
-*\*Note: It is possible for a certificate to specify a different port*  
-***Soft Fail** will allow the connection to proceed in the event that the OSCP service does not respond.*  
-***Hard Fail** will only allow the connection if the OSCP service responds and the certificate is confirmed as not revoked.*
+**CRL Mode**: *Disabled/Soft Fail/Hard Fail*  
+To have the endpoint certificate automatically checked against a Certificate Revocation List (CRL) service.  
+The service used is defined within each certificate. It will typically be the Issuing Authority.  
+Protocol: TCP; Port 80 or 443^  
+^Note: is possible for a certificate to specify a different port.  
+**Soft Fail** will allow the connection to proceed in the event that the CRL service does not respond.  
+**Hard Fail** will only allow the connection if the CRL service responds and the certificate is confirmed as not revoked.  
 \
+**OCSP Mode**: *Disabled/Soft Fail/Hard Fail*  
+To have the endpoint certificate automatically checked against an Online Certificate Status Protocol service (OSCP). 
+The service used is defined within each certificate. This is typically the Certificate Authority (CA) that issued it.  
+Protocol: TCP; Port 80 or 443^  
+^Note: It is possible for a certificate to specify a different port.  
+**Soft Fail** will allow the connection to proceed in the event that the OSCP service does not respond.  
+**Hard Fail** will only allow the connection if the OSCP service responds and the certificate is confirmed as not revoked.  
 \
 **Trusted Server Certificates**:  
-*If Server Certificate Validation is Enabled (above).*  
-*Select from **Additional Trusted Certificates.***  
-***![](assets/images/image_46_32.png)***  
+If Server Certificate Validation is Enabled (above).  
+Select from **Additional Trusted Certificates.**  
+![](assets/images/image_46_32.png)
 \
 \
-**Hostname verification**: Enabled/Disabled  
+**Hostname verification**: *Enabled/Disabled*  
 To verify hostname matches? (matches what?)  
-***![](assets/images/image_46_22.png)***
+![](assets/images/image_46_22.png)
 \
 \
 **Client Certificate**:  
-*Your client certificate to present to the endpoint if requested or required.  Select from **Local Certificates.***  
-***![](assets/images/image_46_23.png)***
+Your client certificate to present to the endpoint if requested or required.  Select from **Local Certificates.** 
+![](assets/images/image_46_23.png)
 \
 \
 **Enabled Protocols**:  
-*Select the acceptable protocol or protocols.*  
-*The list is defined in mirth.properties as https.server.protocols*  
-*![](assets/images/image_46_24.png)*
+Select the acceptable protocol or protocols. 
+The list is defined in mirth.properties as
+```
+https.server.protocols
+```
+![](assets/images/image_46_24.png)
 \
 \
 **Enabled Ciphers**:  
-*Select the ciphers associated with the selected protocol(s).*  
-*The list is defined in  mirth.properties as https.ciphersuites*  
-*![](assets/images/image_46_25.png)*  
+Select the ciphers associated with the selected protocol(s).
+The list is defined in mirth.properties as 
+```
+https.ciphersuites
+```
+![](assets/images/image_46_25a.png)
 	
 
 #### ***Sender GUI Examples***
 
 ##### **Connector Type: HTTP Sender**
 
-![](assets/images/image_46_26.png)
+![](assets/images/image_46_26a.png)
 
 ##### **Connector Type: TCP Sender** 
 
@@ -271,60 +278,66 @@ The TLS Settings section is present in the **HTTP Listener**, **TCP Listener** a
 #### ***TLS Settings***
 
 **Use TLS Manager**: Yes/No  
-	*Enables the TLS section*  
-	*![](assets/images/image_46_29.png)*
+Enables the TLS section  
+![](assets/images/image_46_29.png)
 \
 \
 **Server Certificate**:  
-*Select from **Local CertifIcates***  
-***![](assets/images/image_46_30.png)***  
+Select from **Local CertifIcates** 
 \
-**Client Authentication Mode**: None/Requested/Required  
-I*f you want the client to prove their identity you can **Request** (provide the option) or **Require** (mandate) that they supply a certificate.*  
-***![](assets/images/image_46_31.png)***  
+![](assets/images/image_46_30.png)  
+\
+**Client Authentication Mode**: *None/Requested/Required*  
+If you want the client to prove their identity you can **Request** (provide the option) or **Require** (mandate) that they supply a certificate.  
+![](assets/images/image_46_31.png)  
 \
 **Trusted Client Configuration**:  
-*If you are Requesting or Requiring a Client Certificate (above).*  
-*Select from **Additional Trusted Certificates.***  
-***![](assets/images/image_46_33.png)***  
+If you are Requesting or Requiring a Client Certificate (above).  
+Select from **Additional Trusted Certificates.**  
+![](assets/images/image_46_33.png)  
 \
-**Subject DN Validation Mode**: None/Partial/Exact  
-*If you want to accept Client Certificates that match specific Distinguished Name attributes.  **Use with caution.***  
-*Example for illustration purposes only:*  
-*![](assets/images/image_46_34.png)*  
+**Subject DN Validation Mode**: *None/Partial/Exact*  
+If you want to accept Client Certificates that match specific Distinguished Name attributes.  **Use with caution.**  
+Example for illustration purposes only:  
+![](assets/images/image_46_34.png)  
 \
-**CRL Mode**: Disabled/Soft Fail/Hard Fail  
-*To have a Client Certificate automatically checked against a Certificate Revocation List (CRL) service.*  
-*The service used is defined within each certificate. It will typically be the Issuing Authority.*  
-*Protocol: TCP; Port 80 or 443\**  
-*\*Note: is possible for a certificate to specify a different port.*  
-***Soft Fail** will allow the connection to proceed in the event that the CRL service does not respond.*  
-***Hard Fail** will only allow the connection if the CRL service responds and the certificate is confirmed as not revoked.*  
-*![](assets/images/image_46_35.png)*
+**CRL Mode**: *Disabled/Soft Fail/Hard Fail*  
+To have a Client Certificate automatically checked against a Certificate Revocation List (CRL) service.  
+The service used is defined within each certificate. It will typically be the Issuing Authority.  
+Protocol: TCP; Port 80 or 443^  
+^Note: is possible for a certificate to specify a different port.   
+**Soft Fail** will allow the connection to proceed in the event that the CRL service does not respond.  
+**Hard Fail** will only allow the connection if the CRL service responds and the certificate is confirmed as not revoked.  
+![](assets/images/image_46_35.png)  
 \
 \
-**OCSP Mode**: Disabled/Soft Fail/Hard Fail  
-*To have a Client Certificate automatically checked against an Online Certificate Status Protocol service (OSCP).*  
-*The service used is defined within each certificate. This is typically the Certificate Authority (CA) that issued it.*  
-*Protocol: TCP; Port 80 or 443\**  
-*\*Note: It is possible for a certificate to specify a different port*  
-***Soft Fail** will allow the connection to proceed in the event that the OSCP service does not respond.*  
-***Hard Fail** will only allow the connection if the OSCP service responds and the certificate is confirmed as not revoked.*  
-*![](assets/images/image_46_36.png)*
+**OCSP Mode**: *Disabled/Soft Fail/Hard Fail*  
+To have a Client Certificate automatically checked against an Online Certificate Status Protocol service (OSCP).  
+The service used is defined within each certificate. This is typically the Certificate Authority (CA) that issued it.  
+Protocol: TCP; Port 80 or 443^  
+^Note: It is possible for a certificate to specify a different port  
+**Soft Fail** will allow the connection to proceed in the event that the OSCP service does not respond.  
+**Hard Fail** will only allow the connection if the OSCP service responds and the certificate is confirmed as not revoked.  
+![](assets/images/image_46_36.png)  
 \
 \
 **Enabled Protocols**:  
-*Select the server protocol or protocols.*  
-*The list is defined in mirth.properties as https.server.protocols*  
-*![](assets/images/image_46_37.png)*
+Select the server protocol or protocols.  
+The list is defined in mirth.properties as
+```
+https.server.protocols
+```
+![](assets/images/image_46_37.png)  
 \
 \
 **Enabled Ciphers**:  
-*Select the ciphers associated with the selected protocol(s).*  
-*The list is defined in  mirth.properties as https.ciphersuites*  
-*![](assets/images/image_46_38.png)*  
+Select the ciphers associated with the selected protocol(s).  
+The list is defined in mirth.properties as
+```
+https.ciphersuites
+```
+![](assets/images/image_46_38a.png)
 	
-
 #### ***Listener GUI Examples***
 
 ##### **Connector Type: HTTP Listener**
@@ -333,7 +346,7 @@ I*f you want the client to prove their identity you can **Request** (provide the
 
 ##### **Connector Type: TCP Listener**
 
-![][image36]
+![](assets/images/image_46_40.png)
 
 ##### 
 
@@ -374,7 +387,7 @@ To view the differences between two versions, click on one version to highlight 
 Right-click one of the highlighted versions to reveal a dropdown menu.    
 Select *Show Diff* from the dropdown.
 
-#### ***![](assets/images/image_46_46.gif)***
+#### ![](assets/images/image_46_46.gif)
 
 #### ***Channel Diff: Object View***
 
@@ -396,7 +409,7 @@ Displays a side-by-side illustration on the channel XML with differences highlig
 
 To revert the channel design to an alternative version right-click the chosen alternative and select *Revert to this version* from the dropdown.  This action creates a new version of the channel based on the selected version.
 
-# **![](assets/images/image_46_49.gif)**
+# ![](assets/images/image_46_49.gif)
 
 # 
 
