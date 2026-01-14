@@ -44,6 +44,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Overview', link: 'engine' },
+          { text: 'Plugin Guide', link: 'engine/plugins' },
           { text: 'Contributing', link: 'engine/contributing' },
         ]
       },
