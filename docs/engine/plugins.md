@@ -15,9 +15,8 @@ Open Integration Engine supports a plugin architecture that enables:
 
 To manage plugins in Open Integration Engine:
 
-1. Open the **OIE Administrator** application
-2. Navigate to **Settings** from the main menu
-3. Select **Extensions** from the left sidebar
+1. Launch and login to the **OIE Administrator Client**
+2. Select **Extensions** from the **Engine** sidebar menu
 4. You will see a list of all installed plugins along with their status and other details.
 
 ## Installing Plugins
@@ -27,12 +26,13 @@ To manage plugins in Open Integration Engine:
 The easiest way to install a plugin is through the Administrator interface:
 
 1. Download the plugin `.zip` file from a trusted source
-2. Open the **OIE Administrator** and navigate to **Settings** → **Extensions**
-3. Click the **Install Extension** button
-4. Browse to and select the plugin `.zip` file
-5. Click **Open** to begin the installation
-6. Review the plugin information and click **Install**
-7. **Restart** the OIE Server for the plugin to take effect
+2. Launch and login to the **OIE Administrator Client**
+3. Select **Extensions** from the **Engine** sidebar menu
+4. Click the **Browse** button
+5. Locate and select the plugin `.zip` file
+6. Click **Open**
+7. Click **Install**
+8. **Restart** the OIE Server for the plugin to take effect
 
 ::: info
 Always restart the OIE Server after installing or uninstalling plugins to ensure changes take effect.
